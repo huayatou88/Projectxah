@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="测试套件">
+    <test name="这些是测试模块">
+        <classes>
+            <class name="com.dtxy.BaseTest"/>
+            <methodes>
+                <include name="mytest1"/>
+                <include name="mytest2"/>
+                <include name="mytest3"/>
+                <include name="LogDemo"/>
+            </methodes>
+        </classes>
+    </test>
+    <listeners>
+        <!--默认监听的类显示的测试报告样式有问题-->
+     <!--   <listener class-name="com.vimalselvam.testng.listener.ExtentTestNgFormatter"/>-->
+        <!--解决测试报告样式问题，需重写监听类-->
+        <listener class-name="com.dtxy.ExtentreportTestListener"/>
+    </listeners>
+</suite>
